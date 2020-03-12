@@ -3,7 +3,7 @@
 对于刚接触项目者，如"快速指南"说明，只需要：
 
 - **1** 个配置：`/etc/ansible/hosts`
-- **1** 键安装：`ansible-playbook /etc/ansilbe/90.setup.yml`
+- **1** 键安装：`ansible-playbook /etc/ansible/90.setup.yml`
 
 具体来讲 `kubeasz`创建集群主要在以下两个地方进行配置：
 
@@ -23,7 +23,6 @@
 
 - 可以在不做任何配置更改情况下使用默认值创建集群
 - 可以根据实际需要配置 k8s 集群，常用举例
-  - 配置 kube-proxy 使用 ipvs：修改 roles/kube-node/defaults/main.yml 变量 PROXY_MODE: "ipvs"
   - 配置 lb 节点负载均衡算法：修改 roles/lb/defaults/main.yml 变量 BALANCE_ALG: "roundrobin"
   - 配置 docker 国内镜像加速站点：修改 roles/docker/defaults/main.yml 相关变量
   - 配置 apiserver 支持公网域名：修改 roles/kube-master/defaults/main.yml 相关变量
